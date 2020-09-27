@@ -64,8 +64,8 @@ The `createSecret()` method accepts two arguments: `$bits` (default: `80`) and `
 
 Another, more user-friendly, way to get the shared secret into the app is to generate a [QR-code](http://en.wikipedia.org/wiki/QR_code) which can be scanned by the app. To generate these QR codes you can use any one of the built-in `QRProvider` classes:
 
-1. `ImageChartsQRCodeProvider` (default)
-2. `QRServerProvider`
+1. `QRServerProvider` (default)
+2. `ImageChartsQRCodeProvider`
 3. `QRicketProvider`
 
 ...or implement your own provider. To implement your own provider all you need to do is implement the `IQRCodeProvider` interface. You can use the built-in providers mentioned before to serve as an example or read the next chapter in this file. The built-in classes all use a 3rd (e.g. external) party (Image-charts, QRServer and QRicket) for the hard work of generating QR-codes (note: each of these services might at some point not be available or impose limitations to the number of codes generated per day, hour etc.). You could, however, easily use a project like [PHP QR Code](http://phpqrcode.sourceforge.net/) (or one of the [many others](https://packagist.org/search/?q=qr)) to generate your QR-codes without depending on external sources. Later on we'll [demonstrate](#qr-code-providers) how to do this.
