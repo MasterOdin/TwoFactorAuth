@@ -67,4 +67,8 @@ class NTPTimeProvider implements ITimeProvider
             throw new TimeException(sprintf('Unable to retrieve time from %s (%s)', $this->host, $ex->getMessage()));
         }
     }
+
+    public function getUrl() {
+        return "";
+    }
 }

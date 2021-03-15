@@ -68,4 +68,8 @@ class HttpTimeProvider implements ITimeProvider
         }
 
     }
+
+    public function getUrl() {
+        return $this->url;
+    }
 }

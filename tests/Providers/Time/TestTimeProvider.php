@@ -24,4 +24,9 @@ class TestTimeProvider implements ITimeProvider
     {
         return $this->time;
     }
+
+    public function getUrl()
+    {
+        return "";
+    }
 }

@@ -8,4 +8,8 @@ class LocalMachineTimeProvider implements ITimeProvider
     {
         return time();
     }
+
+    public function getUrl() {
+        return "";
+    }
 }

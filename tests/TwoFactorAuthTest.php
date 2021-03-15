@@ -57,7 +57,7 @@ class TwoFactorAuthTest extends TestCase
     {
         $tfa = new TwoFactorAuth('Test', 6, 30, 'sha1');
         $tfa->ensureCorrectTime(array(
-            new \RobThree\Auth\Providers\Time\NTPTimeProvider(),                         // Uses pool.ntp.org by default
+            //new \RobThree\Auth\Providers\Time\NTPTimeProvider(),                         // Uses pool.ntp.org by default
             //new \RobThree\Auth\Providers\Time\NTPTimeProvider('time.google.com'),      // Somehow time.google.com and time.windows.com make travis timeout??
             new \RobThree\Auth\Providers\Time\HttpTimeProvider(),                        // Uses google.com by default
             new \RobThree\Auth\Providers\Time\HttpTimeProvider('https://github.com'),

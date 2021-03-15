@@ -232,8 +232,12 @@ class TwoFactorAuth
                 throw new TwoFactorAuthException('Object does not implement ITimeProvider');
             }
 
+            $t0 = $t->getTime();
+            $t1 = $timeprovider->getTime();
+
             // Get time from default time provider and compare to specific time provider and throw if time difference is more than specified number of seconds leniency
-            if (abs($timeprovider->getTime() - $t->getTime()) > $leniency) {
+            if (abs($t1 - $t0) > $leniency) {
+                var_dump($t->getUrl());
                 throw new TwoFactorAuthException(sprintf('Time for timeprovider is off by more than %d seconds when compared to %s', $leniency, get_class($t)));
             }
         }
