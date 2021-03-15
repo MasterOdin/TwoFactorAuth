@@ -15,7 +15,7 @@ jobs:
     steps:
     - run: timedatectl
     - run: sudo apt-get install -y  chrony
-    - run: sudo chronyd –q
+    - run: sudo chronyd -Q
 
     - uses: actions/checkout@v2
 
